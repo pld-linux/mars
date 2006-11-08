@@ -18,7 +18,7 @@ BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	scons
-BuildRequieres:	sed >= 4.0
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
