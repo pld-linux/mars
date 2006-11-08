@@ -1,4 +1,10 @@
 #
+# TODO: 
+# - the game crashes with SDL Parachute deployed error,
+#   it doesn't if we install the game and run it from the dir
+#   where it was build, so theres probably more to install - 
+#   find out what it is
+#
 # Conditional build:
 %bcond_without	opengl		# build without opengl
 #
