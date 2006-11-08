@@ -36,7 +36,7 @@ Planecie w okresie wczesnej kolonizacji.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 %{__sed} -i 's@data/@%{_datadir}/%{name}/@' src/{mars.cpp,Functions.cpp}
 %{__sed} -i 's@data/@%{_datadir}/%{name}/@' data/xml/ngg/light.xml
 %{__sed} -i 's@data/@%{_datadir}/%{name}/@' data/xml/player.xml
