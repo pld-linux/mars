@@ -18,6 +18,7 @@ BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	scons
+BuildRequieres:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,13 +43,13 @@ Planecie w okresie wczesnej kolonizacji.
 
 %build
 scons \
-	with_opengl=%{?with_opengl:yes}%{!?with_opengl:no} \
+	with_opengl=%{?with_opengl:yes}%{!?with_opengl:no}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
-install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name} $RPM_BUILD_ROOT%{_bindir}/
 cp -r data/* $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
