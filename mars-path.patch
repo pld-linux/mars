@@ -1,4 +1,4 @@
---- mars-0.2.0/src/XmlLoader.cpp~	2006-11-02 13:10:42.000000000 +0100
+--- mars-0.2.0/src/XmlLoader.cpp~	2006-11-02 13:10:42.000000001 +0100
 +++ mars-0.2.0/src/XmlLoader.cpp	2006-11-08 02:50:00.000000000 +0100
 @@ -207,7 +207,7 @@
  void XmlLoader::LoadImages(const char *path)
