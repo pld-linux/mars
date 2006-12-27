@@ -1,0 +1,29 @@
+--- mars-0.2.0/src/XmlLoader.cpp~	2006-11-02 13:10:42.000000000 +0100
++++ mars-0.2.0/src/XmlLoader.cpp	2006-11-08 02:50:00.000000000 +0100
+@@ -207,7 +207,7 @@
+ void XmlLoader::LoadImages(const char *path)
+ {
+ 	Image * img;
+-	string string_path = path;
++	string string_path = "/usr/share/mars/img/buildings/NGG/bunker_outpost_1/";
+ 
+ 	//FIXME temporary solution
+ 		
+@@ -219,7 +219,7 @@
+ 		img = gtracker->GetImage(string_path + "02.png", screen->GetGraphicMode());
+ 		_views.push_back(img);
+ 		// If element has more then 2 images, Unit
+-		if(ImageFileExists(string_path + "03.png"))
++		/*if(ImageFileExists(string_path + "03.png"))
+ 		{
+ 			img = gtracker->GetImage(string_path + "03.png", screen->GetGraphicMode());
+ 			_views.push_back(img);
+@@ -233,7 +233,7 @@
+ 			_views.push_back(img);
+ 			img = gtracker->GetImage(string_path + "08.png", screen->GetGraphicMode());
+ 			_views.push_back(img);
+-		}
++		}*/
+ 	}
+ 	catch(Exception e)
+ 	{
