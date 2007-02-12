@@ -9,7 +9,7 @@
 %bcond_without	opengl		# build without opengl
 #
 Summary:	Turn based strategy game with isometric graphic
-Summary(pl):	Turowa gra strategiczna z grafik± izometryczn±
+Summary(pl.UTF-8):   Turowa gra strategiczna z grafikÄ… izometrycznÄ…
 Name:		mars
 Version:	0.2.0
 Release:	1
@@ -34,10 +34,10 @@ graphic.
 The player is the leader of a mercenary group that works on the Red
 Planet in the period of the terrestrian colonization.
 
-%description -l pl
-Mars, Land of No Mercy jest turow± strategi± z izometryczn± grafik±.
+%description -l pl.UTF-8
+Mars, Land of No Mercy jest turowÄ… strategiÄ… z izometrycznÄ… grafikÄ….
 
-Gracz staje na czele najemnej grupy, która pracuje na Czerwonej
+Gracz staje na czele najemnej grupy, ktÃ³ra pracuje na Czerwonej
 Planecie w okresie wczesnej kolonizacji.
 
 %prep
