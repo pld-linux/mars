@@ -9,7 +9,7 @@
 %bcond_without	opengl		# build without opengl
 #
 Summary:	Turn based strategy game with isometric graphic
-Summary(pl.UTF-8):   Turowa gra strategiczna z grafiką izometryczną
+Summary(pl.UTF-8):	Turowa gra strategiczna z grafiką izometryczną
 Name:		mars
 Version:	0.2.0
 Release:	1
