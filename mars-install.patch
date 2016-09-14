@@ -1,0 +1,36 @@
+--- mars-0.2.1/SConstruct.orig	2006-12-19 01:56:15.000000000 +0100
++++ mars-0.2.1/SConstruct	2016-09-13 20:40:35.967786089 +0200
+@@ -18,17 +18,13 @@
+ # Adding options to the environment
+ env = Environment(options = opts)
+ 
+-if 'install' in sys.argv:
+-	root = ARGUMENTS.get('root', '/')
+-	prefix = ARGUMENTS.get('prefix', '/usr/local')
+-
+-	if os.path.isabs(prefix):
+-		prefix = prefix[1:]
+-	bin_dir = os.path.join(root, prefix, 'bin') # WITH fakeroot
+-	data_dir = os.path.join('/', prefix, 'share/mars') # WITHOUT fakeroot
+-else:
+-	bin_dir = ''
+-	data_dir = ''
++prefix = ARGUMENTS.get('prefix', '/usr/local')
++root = ARGUMENTS.get('root', '/')
++if os.path.isabs(prefix):
++	prefix = prefix[1:]
++
++bin_dir = os.path.join('/', prefix, 'bin')
++data_dir = os.path.join('/', prefix, 'share/mars') # WITHOUT fakeroot
+ 
+ 
+ # OPTION no_mingw
+@@ -130,6 +126,8 @@
+ # export variables and run sub scripts
+ if data_dir != '': # installation required
+ 	data_dir = os.path.join(root, prefix, 'share/mars') # WITH fakeroot
++if bin_dir != '':
++	bin_dir = os.path.join(root, prefix, 'bin')
+ 
+ Export('env', 'opts', 'bin_dir', 'data_dir')
+ SConscript('src/SConscript', build_dir='build', duplicate=0)

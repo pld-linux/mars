@@ -1,0 +1,23 @@
+--- mars-0.2.1/SConstruct.orig	2016-09-13 21:13:39.837763435 +0200
++++ mars-0.2.1/SConstruct	2016-09-13 21:13:43.601096725 +0200
+@@ -3,6 +3,7 @@
+ # create build environment and options
+ env = Environment()
+ opts = Options()
++vars = Variables()
+ 
+ # OPTION debug
+ opts.Add(BoolOption('debug', 'Set to yes (or 1) to build for debug', 'no'))
+@@ -15,8 +16,11 @@
+ # OPTION root & prefix
+ opts.Add(PathOption('root', 'Path to the fakeroot directory', '/'))
+ opts.Add(PathOption('prefix', 'Path to prefix to default destinations', '/usr/local'))
++opts.Add(('CXX', 'C++ compiler', 'g++'))
++opts.Add(('CXXFLAGS', 'C++ flags', '-O2'))
+ # Adding options to the environment
+-env = Environment(options = opts)
++env = Environment(options = opts)
++env["CXXFLAGS"] = env["CXXFLAGS"].split()
+ 
+ prefix = ARGUMENTS.get('prefix', '/usr/local')
+ root = ARGUMENTS.get('root', '/')
